@@ -89,21 +89,43 @@ This will launch all the containers defined in the Docker configuration, using t
 
 ---
 
-## 🛑 Stopping the Services
+## ⚖️ Docker Compose Overview
 
-To stop all running containers, use:
+The `docker-compose.yml` file defines all required services and their dependencies:
 
-```bash
-docker-compose down
-```
+### Core Services
+
+* **MySQL** (`ziphra-mysql`) - database service
+* **MongoDB** (`ziphra-mongo`) - NoSQL document store
+
+> ⚠️ **Note**: These databases are only accessible from within the Docker network. They cannot be accessed externally for security reasons.
+
+### Ziphra Modules
+
+* **App Server** (`ziphra-appserver`)
+* **Messaging** (`ziphra-messaging`)
+* **Session Manager** (`ziphra-sessionmanager`)
+* **IDS Provider** (`ziphra-idsprovider`)
+
+All modules share common environment variables for database access and internal communication.
+
+### Shared Settings
+
+* MySQL root password: `root`
+* MySQL database: `sec`
+* MongoDB root username/password: `root`
+* All services are connected via the custom Docker network `ziphra-net`.
+* Data is persisted via Docker volumes `mysql_data` and `mongo_data`.
+
+Make sure to review port mappings inside each service definition and adjust them to avoid conflicts.
 
 ---
 
-## 🧩 Notes
+## 👏 Tips
 
-* Make sure the ports defined in your environment variables are not in use by other services on your machine.
-* If you only want to run a specific module, you can modify the `docker-compose.yml` file or use `docker run` with the required variables manually.
-* You can check if the variables were correctly loaded by running `env` (Linux/macOS) or `set` (Windows) before executing Docker commands.
+* Ensure that the required ports are free on your machine.
+* Run `docker-compose down -v` to clear volumes if you need a fresh start.
+* Use `docker-compose logs -f` to view live logs from all services.
 
 ---
 
