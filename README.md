@@ -1,6 +1,6 @@
 # 🐳 Ziphra Messenger - Server Docker Setup
 
-This repository contains all the services required to run the Ziphra system using Docker containers. Two startup scripts are included: `startup.bat` (for Windows) and `startup.sh` (for Linux/macOS), which are responsible for loading the necessary environment variables.
+This repository contains all the services required to run the Ziphra Messenger Server using Docker containers. Two startup scripts are included: `startup.bat` (for Windows) and `startup.sh` (for Linux/macOS), which are responsible for loading the necessary environment variables.
 
 ---
 
