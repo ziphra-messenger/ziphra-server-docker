@@ -1,4 +1,4 @@
-# 🐳 Ziphra Project - Docker Setup
+# 🐳 Ziphra Messeger - Docker Setup
 
 This repository contains all the services required to run the Ziphra system using Docker containers. Two startup scripts are included: `startup.bat` (for Windows) and `startup.sh` (for Linux/macOS), which are responsible for loading the necessary environment variables.
 
