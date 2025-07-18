@@ -69,6 +69,18 @@ chmod +x startup.sh
 
 ---
 
+🔗 Reference Files
+
+You can find examples of the key files used in this project here:
+
+startup.bat (Windows)
+
+startup.sh (Linux/macOS)
+
+docker-compose.yml
+
+These files contain the full configuration and environment setup required to run the system locally.
+
 ## ▶️ Running the System
 
 ### On Windows
