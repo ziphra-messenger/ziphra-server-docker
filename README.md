@@ -1,6 +1,6 @@
-# 🐳 Ziphra Project - Docker Setup
+# 🐳 Ziphra Messenger - Server Docker Setup
 
-This repository contains all the services required to run the Ziphra system using Docker containers. Two startup scripts are included: `startup.bat` (for Windows) and `startup.sh` (for Linux/macOS), which are responsible for loading the necessary environment variables.
+This repository contains all the services required to run the Ziphra Messenger Server using Docker containers. Two startup scripts are included: `startup.bat` (for Windows) and `startup.sh` (for Linux/macOS), which are responsible for loading the necessary environment variables.
 
 ---
 
@@ -66,6 +66,18 @@ export MODULE_IDSPROVIDER=http://localhost:8081
 ```sh
 chmod +x startup.sh
 ```
+
+---
+
+## 🔗 Reference Files
+
+You can find examples of the key files used in this project here:
+
+* [startup.bat (Windows)](https://github.com/ziphra-messenger/ziphra-server-docker/blob/main/startup.bat)
+* [startup.sh (Linux/macOS)](https://github.com/ziphra-messenger/ziphra-server-docker/blob/main/startup.sh)
+* [docker-compose.yml](https://github.com/ziphra-messenger/ziphra-server-docker/blob/main/docker-compose.yml)
+
+These files contain the full configuration and environment setup required to run the system locally.
 
 ---
 
